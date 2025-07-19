@@ -15,12 +15,24 @@ const defaultUnproductive = [
   'reddit.com'
 ];
 
-function getClassifications(callback) {
-  chrome.storage.local.get(['productiveSites', 'unproductiveSites'], (result) => {
-    const productive = result.productiveSites || defaultProductive;
-    const unproductive = result.unproductiveSites || defaultUnproductive;
-    callback({ productive, unproductive });
-  });
+function setLoading(isLoading) {
+  document.getElementById('options-loading').style.display = isLoading ? 'block' : 'none';
+  document.getElementById('productive-list').style.display = isLoading ? 'none' : 'block';
+  document.getElementById('unproductive-list').style.display = isLoading ? 'none' : 'block';
+}
+
+function setError(msg) {
+  document.getElementById('options-error').textContent = msg || '';
+}
+
+function getClassifications(callback, errorCallback) {
+  fetch('http://localhost:3000/classify')
+    .then(res => res.json())
+    .then(data => callback({
+      productive: data.productive || defaultProductive,
+      unproductive: data.unproductive || defaultUnproductive
+    }))
+    .catch(() => errorCallback('Failed to fetch site classifications from backend.'));
 }
 
 function saveClassifications(productive, unproductive) {
@@ -80,9 +92,15 @@ function updateUI() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  setLoading(true);
+  setError('');
   getClassifications(({ productive, unproductive }) => {
     productiveSites = [...productive];
     unproductiveSites = [...unproductive];
+    setLoading(false);
     updateUI();
+  }, (err) => {
+    setLoading(false);
+    setError(err);
   });
 }); 

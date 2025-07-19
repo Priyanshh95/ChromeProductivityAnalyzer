@@ -1,20 +1,28 @@
 // Dashboard script for Chrome Productivity Analyzer 
 
-function getTimeData(callback) {
+function setLoading(isLoading) {
+  document.getElementById('analytics').textContent = isLoading ? 'Loading...' : '';
+}
+
+function setError(msg) {
+  document.getElementById('dashboard-error').textContent = msg || '';
+}
+
+function getTimeData(callback, errorCallback) {
   fetch('http://localhost:3000/stats')
     .then(res => res.json())
     .then(data => callback(data.stats || {}))
-    .catch(() => callback({}));
+    .catch(() => errorCallback('Failed to fetch analytics from backend.'));
 }
 
-function getClassifications(callback) {
+function getClassifications(callback, errorCallback) {
   fetch('http://localhost:3000/classify')
     .then(res => res.json())
     .then(data => callback({
       productive: data.productive || [],
       unproductive: data.unproductive || []
     }))
-    .catch(() => callback({ productive: [], unproductive: [] }));
+    .catch(() => errorCallback('Failed to fetch site classifications from backend.'));
 }
 
 function formatTime(seconds) {
@@ -59,9 +67,18 @@ function renderAnalytics(timeData, classifications) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  setLoading(true);
+  setError('');
   getTimeData((timeData) => {
     getClassifications((classifications) => {
+      setLoading(false);
       renderAnalytics(timeData, classifications);
+    }, (err) => {
+      setLoading(false);
+      setError(err);
     });
+  }, (err) => {
+    setLoading(false);
+    setError(err);
   });
 }); 
