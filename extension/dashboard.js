@@ -1,18 +1,20 @@
 // Dashboard script for Chrome Productivity Analyzer 
 
 function getTimeData(callback) {
-  chrome.storage.local.get(['timeData'], (result) => {
-    callback(result.timeData || {});
-  });
+  fetch('http://localhost:3000/stats')
+    .then(res => res.json())
+    .then(data => callback(data.stats || {}))
+    .catch(() => callback({}));
 }
 
 function getClassifications(callback) {
-  chrome.storage.local.get(['productiveSites', 'unproductiveSites'], (result) => {
-    callback({
-      productive: result.productiveSites || [],
-      unproductive: result.unproductiveSites || []
-    });
-  });
+  fetch('http://localhost:3000/classify')
+    .then(res => res.json())
+    .then(data => callback({
+      productive: data.productive || [],
+      unproductive: data.unproductive || []
+    }))
+    .catch(() => callback({ productive: [], unproductive: [] }));
 }
 
 function formatTime(seconds) {

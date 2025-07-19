@@ -28,6 +28,12 @@ function saveClassifications(productive, unproductive) {
     productiveSites: productive,
     unproductiveSites: unproductive
   });
+  // Sync to backend
+  fetch('http://localhost:3000/classify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ productive, unproductive })
+  }).catch(() => {});
 }
 
 function renderList(list, containerId, type) {

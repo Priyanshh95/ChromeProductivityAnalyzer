@@ -22,6 +22,12 @@ function saveTime(domain, timeSpent) {
     timeData[domain] = (timeData[domain] || 0) + timeSpent;
     chrome.storage.local.set({ timeData });
   });
+  // Sync to backend
+  fetch('http://localhost:3000/log', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ domain, seconds: timeSpent })
+  }).catch(() => {});
 }
 
 // Handle tab or window change
