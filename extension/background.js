@@ -4,7 +4,6 @@
 let currentTabId = null;
 let currentDomain = null;
 let startTime = null;
-let isIdle = false;
 
 // Helper to get domain from URL
 function getDomain(url) {
@@ -80,36 +79,12 @@ chrome.windows.onFocusChanged.addListener((windowId) => {
   }
 });
 
-// Listen for idle state changes
-chrome.idle.setDetectionInterval(60); // 60 seconds idle threshold
-chrome.idle.onStateChanged.addListener((newState) => {
-  if (newState === 'idle' || newState === 'locked') {
-    // User is idle or screen is locked, pause tracking
-    if (!isIdle && currentDomain && startTime) {
-      const now = Date.now();
-      const timeSpent = Math.floor((now - startTime) / 1000);
-      saveTime(currentDomain, timeSpent);
-      isIdle = true;
-      startTime = null;
-    }
-  } else if (newState === 'active') {
-    // User is active again, resume tracking
-    if (isIdle) {
-      chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-        if (tabs.length > 0) {
-          currentTabId = tabs[0].id;
-          currentDomain = getDomain(tabs[0].url);
-          startTime = Date.now();
-        }
-      });
-      isIdle = false;
-    }
-  }
-});
-
 // On extension startup, initialize tracking
 chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
-  if (tabs.length > 0) {
+  if (Array.isArray(tabs) && tabs.length > 0) {
     handleTabChange(tabs[0].id, tabs[0].url);
+  } else {
+    // Defensive: do nothing or log a warning
+    console.warn('No active tab found or tabs is undefined:', tabs);
   }
 }); 
