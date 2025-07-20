@@ -274,6 +274,41 @@
       "domain": "mail.google.com",
       "seconds": 2,
       "timestamp": 1752992003808
+    },
+    {
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
+      "seconds": 5,
+      "timestamp": 1752992457729
+    },
+    {
+      "domain": "extensions",
+      "seconds": 18,
+      "timestamp": 1752992478100
+    },
+    {
+      "domain": "extensions",
+      "seconds": 17,
+      "timestamp": 1752992569476
+    },
+    {
+      "domain": "extensions",
+      "seconds": 21,
+      "timestamp": 1752992664931
+    },
+    {
+      "domain": "extensions",
+      "seconds": 1,
+      "timestamp": 1752992671075
+    },
+    {
+      "domain": "music.youtube.com",
+      "seconds": 2,
+      "timestamp": 1752992673571
+    },
+    {
+      "domain": "www.pw.live",
+      "seconds": 1,
+      "timestamp": 1752992674947
     }
   ],
   "classifications": {
