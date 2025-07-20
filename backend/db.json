@@ -109,6 +109,36 @@
       "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
       "seconds": 1,
       "timestamp": 1752997973937
+    },
+    {
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
+      "seconds": 16,
+      "timestamp": 1752998282952
+    },
+    {
+      "domain": "www.youtube.com",
+      "seconds": 1,
+      "timestamp": 1752998283985
+    },
+    {
+      "domain": "mail.google.com",
+      "seconds": 1,
+      "timestamp": 1752998290998
+    },
+    {
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
+      "seconds": 6,
+      "timestamp": 1752998297566
+    },
+    {
+      "domain": "extensions",
+      "seconds": 1,
+      "timestamp": 1752998299525
+    },
+    {
+      "domain": "www.linkedin.com",
+      "seconds": 1,
+      "timestamp": 1752998302795
     }
   ],
   "classifications": {

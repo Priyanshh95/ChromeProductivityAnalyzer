@@ -106,19 +106,25 @@ function getFriendlyDomainName(domain) {
   return friendlyNames[domain] || domain;
 }
 
+function normalizeDomain(domain) {
+  return domain.replace(/^www\./, '').toLowerCase();
+}
+
 function renderAnalytics(timeData, classifications) {
   let total = 0, productive = 0, unproductive = 0;
-  const prodSet = new Set(classifications.productive);
-  const unprodSet = new Set(classifications.unproductive);
+  // Normalize classification sets
+  const prodSet = new Set(classifications.productive.map(normalizeDomain));
+  const unprodSet = new Set(classifications.unproductive.map(normalizeDomain));
   const rows = [];
 
   for (const [domain, seconds] of Object.entries(timeData)) {
     total += seconds;
     let type = 'Neutral';
-    if (prodSet.has(domain)) {
+    const normDomain = normalizeDomain(domain);
+    if (prodSet.has(normDomain)) {
       productive += seconds;
       type = 'Productive';
-    } else if (unprodSet.has(domain)) {
+    } else if (unprodSet.has(normDomain)) {
       unproductive += seconds;
       type = 'Unproductive';
     }
