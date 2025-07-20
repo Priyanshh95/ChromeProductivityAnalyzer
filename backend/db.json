@@ -2,320 +2,189 @@
   "logs": [
     {
       "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 3,
-      "timestamp": 1752990641749
+      "seconds": 8,
+      "timestamp": 1752997340504
     },
     {
-      "domain": "web.whatsapp.com",
-      "seconds": 2,
-      "timestamp": 1752990645496
-    },
-    {
-      "domain": "extensions",
+      "domain": "docs.google.com",
       "seconds": 1,
-      "timestamp": 1752990646647
+      "timestamp": 1752997342152
     },
     {
-      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
+      "domain": "www.w3schools.com",
       "seconds": 1,
-      "timestamp": 1752990648140
+      "timestamp": 1752997343197
     },
     {
-      "domain": "extensions",
+      "domain": "www.coursera.org",
       "seconds": 1,
-      "timestamp": 1752990649139
-    },
-    {
-      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 3,
-      "timestamp": 1752990652254
-    },
-    {
-      "domain": "music.youtube.com",
-      "seconds": 4,
-      "timestamp": 1752990656704
+      "timestamp": 1752997344265
     },
     {
       "domain": "web.whatsapp.com",
       "seconds": 1,
-      "timestamp": 1752990657894
+      "timestamp": 1752997345394
     },
     {
-      "domain": "chatgpt.com",
+      "domain": "www.google.com",
       "seconds": 1,
-      "timestamp": 1752990658953
+      "timestamp": 1752997347378
     },
     {
-      "domain": "github.com",
+      "domain": "mail.google.com",
       "seconds": 1,
-      "timestamp": 1752990660380
+      "timestamp": 1752997348386
     },
     {
       "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 20,
-      "timestamp": 1752990680573
-    },
-    {
-      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 29,
-      "timestamp": 1752990882983
-    },
-    {
-      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 5,
-      "timestamp": 1752990888559
-    },
-    {
-      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 11,
-      "timestamp": 1752990899633
-    },
-    {
-      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 2,
-      "timestamp": 1752990902074
-    },
-    {
-      "domain": "chatgpt.com",
-      "seconds": 1,
-      "timestamp": 1752990904038
-    },
-    {
-      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 4,
-      "timestamp": 1752991113007
-    },
-    {
-      "domain": "newtab",
-      "seconds": 3,
-      "timestamp": 1752991116011
-    },
-    {
-      "domain": "www.pw.live",
-      "seconds": 3,
-      "timestamp": 1752991121344
-    },
-    {
-      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 6,
-      "timestamp": 1752991127618
-    },
-    {
-      "domain": "www.pw.live",
-      "seconds": 2,
-      "timestamp": 1752991130379
-    },
-    {
-      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 7,
-      "timestamp": 1752991138138
-    },
-    {
-      "domain": "extensions",
-      "seconds": 18,
-      "timestamp": 1752991157523
-    },
-    {
-      "domain": "www.pw.live",
-      "seconds": 1,
-      "timestamp": 1752991161538
-    },
-    {
-      "domain": "881607.colorsealprosper.co",
-      "seconds": 1,
-      "timestamp": 1752991162582
-    },
-    {
-      "domain": "api.bestzlearnpagelivekey.com",
-      "seconds": 4,
-      "timestamp": 1752991167894
-    },
-    {
-      "domain": "www.pw.live",
-      "seconds": 1,
-      "timestamp": 1752991169112
-    },
-    {
-      "domain": "extensions",
-      "seconds": 23,
-      "timestamp": 1752991192854
-    },
-    {
-      "domain": "extensions",
       "seconds": 15,
-      "timestamp": 1752991343343
+      "timestamp": 1752997365519
     },
     {
-      "domain": "web.whatsapp.com",
-      "seconds": 18,
-      "timestamp": 1752991361507
-    },
-    {
-      "domain": "chatgpt.com",
+      "domain": "newtab",
       "seconds": 1,
-      "timestamp": 1752991362900
+      "timestamp": 1752997425038
     },
     {
-      "domain": "web.whatsapp.com",
-      "seconds": 4,
-      "timestamp": 1752991367898
+      "domain": "www.youtube.com",
+      "seconds": 6,
+      "timestamp": 1752997434540
     },
     {
-      "domain": "web.whatsapp.com",
-      "seconds": 16,
-      "timestamp": 1752991384566
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
+      "seconds": 13,
+      "timestamp": 1752997448919
     },
     {
-      "domain": "github.com",
-      "seconds": 12,
-      "timestamp": 1752991398006
-    },
-    {
-      "domain": "github.com",
-      "seconds": 44,
-      "timestamp": 1752991442043
-    },
-    {
-      "domain": "extensions",
-      "seconds": 10,
-      "timestamp": 1752991819143
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
+      "seconds": 23,
+      "timestamp": 1752997547929
     },
     {
       "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
       "seconds": 5,
-      "timestamp": 1752991955496
-    },
-    {
-      "domain": "music.youtube.com",
-      "seconds": 2,
-      "timestamp": 1752991958035
-    },
-    {
-      "domain": "newtab",
-      "seconds": 1,
-      "timestamp": 1752991959578
-    },
-    {
-      "domain": "www.google.com",
-      "seconds": 2,
-      "timestamp": 1752991962517
+      "timestamp": 1752997553930
     },
     {
       "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
       "seconds": 4,
-      "timestamp": 1752991967280
+      "timestamp": 1752997558179
     },
     {
-      "domain": "www.google.com",
-      "seconds": 1,
-      "timestamp": 1752991968273
-    },
-    {
-      "domain": "newtab",
-      "seconds": 3,
-      "timestamp": 1752991972072
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 3,
-      "timestamp": 1752991975168
-    },
-    {
-      "domain": "mail.google.com",
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
       "seconds": 2,
-      "timestamp": 1752991977189
+      "timestamp": 1752997560506
+    },
+    {
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
+      "seconds": 5,
+      "timestamp": 1752997567091
     },
     {
       "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
       "seconds": 6,
-      "timestamp": 1752991983317
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 1,
-      "timestamp": 1752991984984
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 2,
-      "timestamp": 1752991987951
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 1,
-      "timestamp": 1752991989839
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 1,
-      "timestamp": 1752991991570
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 1,
-      "timestamp": 1752991993292
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 2,
-      "timestamp": 1752991996304
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 1,
-      "timestamp": 1752991997860
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 2,
-      "timestamp": 1752992000870
-    },
-    {
-      "domain": "mail.google.com",
-      "seconds": 2,
-      "timestamp": 1752992003808
+      "timestamp": 1752997681537
     },
     {
       "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
-      "seconds": 5,
-      "timestamp": 1752992457729
+      "seconds": 4,
+      "timestamp": 1752997685964
     },
     {
-      "domain": "extensions",
-      "seconds": 18,
-      "timestamp": 1752992478100
-    },
-    {
-      "domain": "extensions",
-      "seconds": 17,
-      "timestamp": 1752992569476
-    },
-    {
-      "domain": "extensions",
-      "seconds": 21,
-      "timestamp": 1752992664931
-    },
-    {
-      "domain": "extensions",
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
       "seconds": 1,
-      "timestamp": 1752992671075
+      "timestamp": 1752997687846
     },
     {
-      "domain": "music.youtube.com",
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
       "seconds": 2,
-      "timestamp": 1752992673571
+      "timestamp": 1752997690283
     },
     {
-      "domain": "www.pw.live",
+      "domain": "github.com",
       "seconds": 1,
-      "timestamp": 1752992674947
+      "timestamp": 1752997972881
+    },
+    {
+      "domain": "hndipnoalnggmljbgblmipinmopkfjlb",
+      "seconds": 1,
+      "timestamp": 1752997973937
     }
   ],
   "classifications": {
     "productive": [
       "github.com",
+      "stackoverflow.com",
+      "leetcode.com",
+      "docs.google.com",
+      "notion.so",
+      "medium.com",
+      "dev.to",
+      "freecodecamp.org",
+      "udemy.com",
+      "coursera.org",
+      "edx.org",
+      "khanacademy.org",
+      "w3schools.com",
+      "mdn.io",
+      "css-tricks.com",
+      "smashingmagazine.com",
+      "sitepoint.com",
+      "web.dev",
+      "developer.mozilla.org",
+      "reactjs.org",
+      "vuejs.org",
+      "angular.io",
+      "nodejs.org",
+      "python.org",
+      "java.com",
+      "microsoft.com",
+      "apple.com",
+      "adobe.com",
+      "figma.com",
+      "trello.com",
+      "asana.com",
+      "slack.com",
+      "zoom.us",
+      "teams.microsoft.com",
+      "linkedin.com",
+      "indeed.com",
+      "glassdoor.com",
+      "reddit.com/r/programming",
+      "reddit.com/r/webdev",
+      "reddit.com/r/learnprogramming",
       "chatgpt.com"
     ],
-    "unproductive": []
+    "unproductive": [
+      "facebook.com",
+      "instagram.com",
+      "twitter.com",
+      "youtube.com",
+      "reddit.com",
+      "tiktok.com",
+      "snapchat.com",
+      "pinterest.com",
+      "tumblr.com",
+      "vine.co",
+      "twitch.tv",
+      "discord.com",
+      "telegram.org",
+      "whatsapp.com",
+      "netflix.com",
+      "hulu.com",
+      "disneyplus.com",
+      "amazon.com",
+      "ebay.com",
+      "etsy.com",
+      "aliexpress.com",
+      "wish.com",
+      "buzzfeed.com",
+      "9gag.com",
+      "imgur.com",
+      "giphy.com",
+      "memecenter.com",
+      "knowyourmeme.com",
+      "web.whatsapp.com"
+    ]
   }
 }

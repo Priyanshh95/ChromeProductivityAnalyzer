@@ -1,6 +1,24 @@
 // Background script for Chrome Productivity Analyzer
 // ... will implement time tracking logic here ...
 
+// Auto-clear storage and reload classifications on startup
+chrome.storage.local.clear(() => {
+  console.log('Storage cleared on startup');
+  fetch('http://localhost:3000/classify')
+    .then(res => res.json())
+    .then(data => {
+      chrome.storage.local.set({
+        productiveSites: data.productive || [],
+        unproductiveSites: data.unproductive || []
+      }, () => {
+        console.log('New classifications loaded from backend on startup');
+        console.log('Productive sites:', data.productive);
+        console.log('Unproductive sites:', data.unproductive);
+      });
+    })
+    .catch(err => console.error('Failed to load classifications on startup:', err));
+});
+
 let currentTabId = null;
 let currentDomain = null;
 let startTime = null;
@@ -86,5 +104,30 @@ chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
   } else {
     // Defensive: do nothing or log a warning
     console.warn('No active tab found or tabs is undefined:', tabs);
+  }
+});
+
+// Listen for messages to reload classifications
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'reloadClassifications') {
+    chrome.storage.local.clear(() => {
+      console.log('Storage cleared manually');
+      fetch('http://localhost:3000/classify')
+        .then(res => res.json())
+        .then(data => {
+          chrome.storage.local.set({
+            productiveSites: data.productive || [],
+            unproductiveSites: data.unproductive || []
+          }, () => {
+            console.log('Classifications reloaded manually');
+            sendResponse({ success: true, message: 'Classifications reloaded' });
+          });
+        })
+        .catch(err => {
+          console.error('Failed to reload classifications:', err);
+          sendResponse({ success: false, message: 'Failed to reload' });
+        });
+    });
+    return true; // Keep message channel open for async response
   }
 }); 

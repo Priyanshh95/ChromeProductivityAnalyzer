@@ -3,11 +3,33 @@
 <head>
   <title>Productivity Stats</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>Today's Productivity</h1>
-  <div id="stats">Loading...</div>
-  <a href="dashboard.html" target="_blank">Open Dashboard</a>
+  <div class="popup-container">
+    <div class="popup-content">
+      <h2>Today's Activity</h2>
+      <div id="today-stats">
+        <div class="stat">
+          <span class="stat-value" id="total-time">0h 0m</span>
+          <span class="stat-label">Total Time</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="productive-time">0h 0m</span>
+          <span class="stat-label">Productive</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="unproductive-time">0h 0m</span>
+          <span class="stat-label">Unproductive</span>
+        </div>
+      </div>
+      <div class="popup-actions">
+        <a href="dashboard.html" target="_blank" class="btn">View Dashboard</a>
+        <a href="options.html" target="_blank" class="btn btn-secondary">Settings</a>
+        <button id="reload-btn" class="btn btn-small">Reload Data</button>
+      </div>
+    </div>
+  </div>
   <script src="popup.js"></script>
 </body>
 </html> 

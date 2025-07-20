@@ -3,15 +3,38 @@
 <head>
   <title>Site Classification Settings</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>Classify Sites</h1>
-  <div id="options-error" style="color:red;"></div>
-  <div id="options-loading">Loading...</div>
-  <h2>Productive Sites</h2>
-  <div id="productive-list"></div>
-  <h2>Unproductive Sites</h2>
-  <div id="unproductive-list"></div>
+  <div class="container">
+    <h1>Site Classification Settings</h1>
+    
+    <div id="options-error" class="error" style="display: none;"></div>
+    <div id="options-loading" class="loading">Loading site classifications...</div>
+    
+    <div class="card">
+      <h2>Productive Sites</h2>
+      <p style="color: #666; margin-bottom: 20px;">These websites are considered productive and will be tracked as positive time.</p>
+      <div id="productive-list"></div>
+    </div>
+    
+    <div class="card">
+      <h2>Unproductive Sites</h2>
+      <p style="color: #666; margin-bottom: 20px;">These websites are considered unproductive and will be tracked as negative time.</p>
+      <div id="unproductive-list"></div>
+    </div>
+    
+    <div class="card">
+      <h2>Tips</h2>
+      <ul style="color: #666; line-height: 1.8;">
+        <li>Add domains without "http://" or "www." (e.g., "github.com")</li>
+        <li>Changes are automatically saved to your backend</li>
+        <li>Unclassified sites will appear as "Neutral" in analytics</li>
+        <li>You can always change these classifications later</li>
+      </ul>
+    </div>
+  </div>
+  
   <script src="options.js"></script>
 </body>
 </html> 

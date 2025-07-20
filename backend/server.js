@@ -131,6 +131,14 @@ app.post('/classify', (req, res) => {
   res.json({ success: true });
 });
 
+// DELETE /logs - clear all time tracking data
+app.delete('/logs', (req, res) => {
+  const db = readDB();
+  db.logs = []; // Clear all logs but keep classifications
+  writeDB(db);
+  res.json({ success: true, message: 'All time tracking data cleared' });
+});
+
 app.listen(PORT, () => {
   console.log(`Backend API running on http://localhost:${PORT}`);
 }); 

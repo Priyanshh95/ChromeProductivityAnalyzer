@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Productivity Dashboard</title>
+  <title>Productivity Analytics Dashboard</title>
   <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <h1>Productivity Analytics</h1>
-  <div id="dashboard-error" style="color:red;"></div>
-  <div id="analytics">Loading...</div>
+  <div class="container">
+    <h1>Productivity Analytics Dashboard</h1>
+    
+    <div id="dashboard-error" class="error" style="display: none;"></div>
+    
+    <div class="card">
+      <h2>Quick Actions</h2>
+      <div style="text-align: center;">
+        <a href="options.html" target="_blank" class="btn">Configure Sites</a>
+        <a href="popup.html" target="_blank" class="btn btn-secondary">View Popup</a>
+        <button id="clear-data-btn" class="btn btn-danger">Clear All Data</button>
+      </div>
+    </div>
+    
+    <div id="analytics">
+      <div class="loading">Loading your productivity data...</div>
+    </div>
+  </div>
+  
   <script src="dashboard.js"></script>
 </body>
 </html> 
